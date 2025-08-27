@@ -1,0 +1,278 @@
+/**
+* ! Reset mặc định
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+a:hover {
+  color: #ffdd57;
+}
+
+/**
+* ! Navbar
+**/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #2871b9, #99bee4);
+  padding: 20px 60px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h2 {
+  font-weight: 600;
+}
+
+.cart {
+  position: relative;
+  background-color: #fff;
+  color: #212529;
+  font-size: 28px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cart:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cartAmount {
+  position: absolute;
+  top: -12px;
+  right: -8px;
+  font-size: 14px;
+  background-color: red;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/**
+* ! Sản phẩm
+**/
+.shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  margin: 0 auto 50px auto;
+  max-width: 1200px;
+}
+
+.item {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.item:hover img {
+  transform: scale(1.05);
+}
+
+.details {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.details h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212529;
+}
+
+.details p {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.price-quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.price-quantity h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #28a745;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+
+.buttons i {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.bi-dash-lg {
+  color: red;
+}
+
+.bi-plus-lg {
+  color: green;
+}
+
+.buttons i:hover {
+  background: #f1f1f1;
+  transform: scale(1.2);
+}
+
+/**
+* ! Nút bấm
+**/
+.HomeBtn,
+.checkout,
+.removeAll {
+  background-color: #212529;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.HomeBtn:hover {
+  background-color: #343a40;
+  transform: translateY(-2px);
+}
+
+.checkout {
+  background-color: #28a745;
+}
+.checkout:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+.removeAll {
+  background-color: #dc3545;
+}
+.removeAll:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+/**
+* ! Giỏ hàng
+**/
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(500px, 800px)); /* dài hơn */
+  justify-content: center;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* tách ảnh và nội dung ra rõ ràng */
+  padding: 15px 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 180px; /* tăng kích thước ảnh */
+  height: 180px; /* giữ hình vuông cho đẹp */
+  border-radius: 12px;
+  object-fit: cover; /* ảnh luôn vừa khung, không méo */
+  flex-shrink: 0; /* không bị co lại khi chữ nhiều */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* làm ảnh nổi hơn */
+}
+
+.cart-item:hover {
+  transform: scale(1.02);
+}
+
+.title-price-x {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title-price h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cart-item-price {
+  background-color: #212529;
+  color: white;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+/**
+* ! Hiệu ứng rung giỏ hàng khi thêm sản phẩm
+**/
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.cart.shake {
+  animation: shake 0.4s ease;
+}
