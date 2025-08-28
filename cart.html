@@ -13,7 +13,7 @@
   <body>
     <div class="navbar">
       <a href="index.html">
-        <h2>Milk Store</h2>
+        <h2>MILK STORE</h2>
       </a>
 
       <a href="cart.html">
@@ -26,6 +26,16 @@
 
     <div id="label" class="text-center"></div>
     <div class="shopping-cart" id="shopping-cart"></div>
+
+    <!-- Popup thanh toán thành công -->
+    <div id="successPopup" class="popup">
+      <div class="popup-content">
+        <i class="bi bi-check-circle-fill"></i>
+        <h2>Thanh toán thành công!</h2>
+        <p>Cảm ơn bạn đã mua hàng tại Milk Store 🎉</p> <br></br>
+        <button onclick="closePopup()">OK</button>
+      </div>
+    </div>
 
     <!-- Load dữ liệu trước, xử lý sau -->
     <script src="./src/Data.js"></script>

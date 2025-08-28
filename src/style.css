@@ -68,8 +68,98 @@ a:hover {
 }
 
 /**
+* ! Banner
+**/
+.banner-small {
+  width: 1200px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative; /* Quan trọng: để nút căn theo banner */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner-small img {
+  width: 100%;
+  height: auto;     /* giữ nguyên tỷ lệ ảnh */
+  display: block;
+}
+
+/* Nút điều hướng */
+.banner-small .prev,
+.banner-small .next {
+  position: absolute;
+  top: 50%;                          /* căn giữa theo chiều cao */
+  transform: translateY(-50%);       /* căn chính giữa */
+  font-size: 28px;
+  font-weight: bold;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  user-select: none;
+  z-index: 10;                       /* để nổi lên trên ảnh */
+}
+
+.banner-small .prev { left: 15px; }
+.banner-small .next { right: 15px; }
+
+.banner-small .prev:hover,
+.banner-small .next:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+
+
+/**
 * ! Sản phẩm
 **/
+.shop-title {
+  display: block;
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 40px auto 25px auto;
+  color: #2980b9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: fadeInUp 0.8s ease;
+  width: fit-content; /* giúp canh giữa gạch chân */
+}
+
+
+/* Gạch chân highlight xanh */
+.shop-title::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(90deg, #2980b9, #6dd5fa);
+  margin: 8px auto 0 auto;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+/* Hiệu ứng hover */
+.shop-title:hover::after {
+  width: 150px;
+}
+
+/* Hiệu ứng xuất hiện */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .shop {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -250,6 +340,59 @@ a:hover {
   border-radius: 6px;
   padding: 4px 8px;
   font-size: 14px;
+}
+
+/* Popup nền mờ */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Nội dung popup */
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content i {
+  font-size: 80px;
+  color: green;
+  margin-bottom: 15px;
+}
+
+.popup-content h2 {
+  margin-bottom: 10px;
+  color: #28a745;
+}
+
+/* Nút OK trong popup */
+.popup-content button {
+  padding: 10px 25px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.popup-content button:hover {
+  background: #218838;
+  transform: scale(1.05);
 }
 
 /**

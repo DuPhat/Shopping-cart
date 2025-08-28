@@ -150,7 +150,7 @@ let TotalAmount = () => {
 
     return (label.innerHTML = `
     <h2>Tổng tiền : $ ${amount}</h2>
-    <button class="checkout">Thanh toán</button>
+    <button onclick="checkout()" class="checkout">Thanh toán</button>
     <button onclick="clearCart()" class="removeAll">Xóa tất cả</button>
     `);
   } else return;
@@ -166,4 +166,26 @@ let clearCart = () => {
   generateCartItems();
   calculation();
   localStorage.setItem("data", JSON.stringify(basket));
+};
+
+/**
+ * ! Thanh toán
+ */
+let checkout = () => {
+  let popup = document.getElementById("successPopup");
+  popup.style.display = "flex";
+
+  // Xóa giỏ hàng sau khi thanh toán
+  basket = [];
+  calculation();
+  generateCartItems();
+  localStorage.setItem("data", JSON.stringify(basket));
+};
+
+/**
+ * ! Đóng popup
+ */
+let closePopup = () => {
+  let popup = document.getElementById("successPopup");
+  popup.style.display = "none";
 };
