@@ -111,8 +111,6 @@ a:hover {
   background: rgba(0,0,0,0.7);
 }
 
-
-
 /**
 * ! Sản phẩm
 **/
@@ -293,12 +291,22 @@ a:hover {
 * ! Giỏ hàng
 **/
 .shopping-cart {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(500px, 800px)); /* dài hơn */
-  justify-content: center;
+  width: 80%;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
+.cart-summary {
+  width: 80%;
+  margin: 20px auto;
+  text-align: right;
+}
+
+.cart-summary h2 {
+  margin-bottom: 10px;
+}
 .cart-item {
   display: flex;
   align-items: center;
