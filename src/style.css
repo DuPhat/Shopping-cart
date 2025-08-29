@@ -291,7 +291,7 @@ a:hover {
 * ! Giỏ hàng
 **/
 .shopping-cart {
-  width: 80%;
+  width: 50%;
   margin: 20px auto;
   display: flex;
   flex-direction: column;
@@ -299,7 +299,7 @@ a:hover {
 }
 
 .cart-summary {
-  width: 80%;
+  width: 50%;
   margin: 20px auto;
   text-align: right;
 }
@@ -307,6 +307,7 @@ a:hover {
 .cart-summary h2 {
   margin-bottom: 10px;
 }
+
 .cart-item {
   display: flex;
   align-items: center;
@@ -343,7 +344,7 @@ a:hover {
 }
 
 .cart-item-price {
-  background-color: #212529;
+  background-color: #ffffff;
   color: white;
   border-radius: 6px;
   padding: 4px 8px;

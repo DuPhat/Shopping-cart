@@ -39,7 +39,7 @@ let generateCartItems = () => {
           <div class="title-price-x">
             <h4 class="title-price">
               <p>${name}</p>
-              <p class="cart-item-price">$ ${price}</p>
+              <p class="cart-item-price">${price.toLocaleString("vi-VN")} ₫</p>
             </h4>
             <i onclick="removeItem(${id})" class="bi bi-x-lg"></i>
           </div>
@@ -52,7 +52,7 @@ let generateCartItems = () => {
             </div>
           </div>
 
-          <h3>$ ${item * price}</h3>
+          <h3>${(item * price).toLocaleString("vi-VN")} ₫</h3>
         
         </div>
       </div>
@@ -149,7 +149,7 @@ let TotalAmount = () => {
       .reduce((x, y) => x + y, 0);
 
     return (label.innerHTML = `
-    <h2>Tổng tiền : $ ${amount}</h2>
+    <h2>Tổng tiền : ${amount.toLocaleString("vi-VN")} ₫</h2>
     <button onclick="checkout()" class="checkout">Thanh toán</button>
     <button onclick="clearCart()" class="removeAll">Xóa tất cả</button>
     `);
