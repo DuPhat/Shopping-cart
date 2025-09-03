@@ -244,7 +244,7 @@ a:hover {
 }
 
 /**
-* ! button
+* !Button
 **/
 .add-btn {
   background-color: #28a745;
@@ -259,6 +259,51 @@ a:hover {
 
 .add-btn:hover {
   background-color: #218838;
+}
+
+/**
+* !Banner
+**/
+
+.banner-small {
+  width: 1200px;
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative; /* Quan trọng: để nút căn theo banner */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.banner-small img {
+  width: 100%;
+  height: auto;     /* giữ nguyên tỷ lệ ảnh */
+  display: block;
+}
+
+/* Nút điều hướng */
+.banner-small .prev,
+.banner-small .next {
+  position: absolute;
+  top: 50%;                          /* căn giữa theo chiều cao */
+  transform: translateY(-50%);       /* căn chính giữa */
+  font-size: 28px;
+  font-weight: bold;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  background: rgba(0,0,0,0.4);
+  border-radius: 50%;
+  user-select: none;
+  z-index: 10;                       /* để nổi lên trên ảnh */
+}
+
+.banner-small .prev { left: 15px; }
+.banner-small .next { right: 15px; }
+
+.banner-small .prev:hover,
+.banner-small .next:hover {
+  background: rgba(0,0,0,0.7);
 }
 
 
